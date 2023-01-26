@@ -3,14 +3,20 @@
  * @Email: cnfrank527@gmail.com
  * @Date: 2023-01-26 00:14:16
  * @LastEditors: Frank Zhou
- * @LastEditTime: 2023-01-26 23:21:51
+ * @LastEditTime: 2023-01-26 23:51:24
  * @Description: file content
  * @FilePath: /react-cms-tailwind/src/components/Navbar.jsx
  */
-import React from 'react'
+import React, { useState } from 'react'
 import { close, menu, logo } from '../assets'
 
 const Navbar = () => {
+  const [toggle, setToggle] = useState(false) //usf
+
+  const handleClick = () => {
+    setToggle(!toggle)
+  }
+
   return (
     <div className="w-screen h-[80px] z-10 bg-white fixed drop-shadow-lg">
       <div className="flex justify-between items-center w-full h-full md:max-w-[1240px]">
@@ -39,30 +45,31 @@ const Navbar = () => {
 
         <div className="md:hidden">
           <img
-            src={menu}
+            src={toggle ? menu : close}
             alt="menu"
-            className="mr-10 w-[48px] object-contain"
+            className="mr-10 h-[38px] object-contain"
+            onClick={handleClick}
           ></img>
         </div>
-
-        
       </div>
 
-        <ul className='bg-white w-full absolute px-8 md:hidden'>
-          <li>Home</li>
-          <li>About</li>
-          <li>Support</li>
-          <li>Platform</li>
-          <li>Pricing</li>
-          <div className="flex flex-col my-4">
+      <ul
+        className={
+          !toggle ? 'bg-white w-full absolute px-8 md:hidden' : 'hidden'
+        }
+      >
+        <li>Home</li>
+        <li>About</li>
+        <li>Support</li>
+        <li>Platform</li>
+        <li>Pricing</li>
+        <div className="flex flex-col my-4">
           <button className=" bg-transparent text-black mr-4 mb-4 px-8 py-3">
             Login
           </button>
           <button className="px-8 py-3">Sign up</button>
         </div>
-        </ul>
-        
-     
+      </ul>
     </div>
   )
 }
