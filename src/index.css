@@ -1,6 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+  li{
+    @apply p-4
+  }
+  button{
+    @apply text-white border bg-indigo-600 rounded
+  }
+  ul{
+    padding: 0;
+    list-style-type: none;
+  }
+}
 /* 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
