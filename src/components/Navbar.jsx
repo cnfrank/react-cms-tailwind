@@ -18,7 +18,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="w-screen h-[80px] z-10 bg-white  drop-shadow-lg relative">
+    <div className="w-full h-[80px] z-10 bg-white  drop-shadow-lg relative">
       <div className="flex justify-between items-center w-full h-full md:max-w-[1240px]">
         <div className="flex items-center">
           <img
