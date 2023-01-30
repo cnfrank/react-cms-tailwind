@@ -3,7 +3,7 @@
  * @Email: cnfrank527@gmail.com
  * @Date: 2023-01-26 00:14:16
  * @LastEditors: Frank Zhou
- * @LastEditTime: 2023-01-26 23:51:24
+ * @LastEditTime: 2023-01-30 19:02:00
  * @Description: file content
  * @FilePath: /react-cms-tailwind/src/components/Navbar.jsx
  */
@@ -11,14 +11,14 @@ import React, { useState } from 'react'
 import { close, menu, logo } from '../assets'
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState(false) //usf
+  const [toggle, setToggle] = useState(true) //usf
 
   const handleClick = () => {
     setToggle(!toggle)
   }
 
   return (
-    <div className="w-screen h-[80px] z-10 bg-white fixed drop-shadow-lg">
+    <div className="w-screen h-[80px] z-10 bg-white  drop-shadow-lg relative">
       <div className="flex justify-between items-center w-full h-full md:max-w-[1240px]">
         <div className="flex items-center">
           <img
