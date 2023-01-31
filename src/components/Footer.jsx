@@ -3,11 +3,13 @@
  * @Email: cnfrank527@gmail.com
  * @Date: 2023-01-30 22:00:35
  * @LastEditors: Frank Zhou
- * @LastEditTime: 2023-01-31 00:08:48
+ * @LastEditTime: 2023-01-31 16:14:30
  * @Description: file content
  * @FilePath: /react-cms-tailwind/src/components/Footer.jsx
  */
+
 import React from 'react'
+import { FaFacebook, FaGithub,FaWeixin,FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -66,10 +68,17 @@ const Footer = () => {
               className="w-full p-2 mr-4 rounded-md mb-2"
               placeholder="Enter email"
             />
-            <button className="p-2  mb-2  bg-green-500">
-              Subscribe
-            </button>
+            <button className="p-2  mb-2  bg-green-500">Subscribe</button>
           </form>
+        </div>
+      </div>
+      <div className="flex flex-col max-w-[1240px] px-2 py-4 m-auto justify-between sm:flex-row text-center text-gray-500">
+        <p>2023 Frankdevs All rights reserved.</p>
+        <div className="flex justify-between sm:w-[300px] pt-4 text-2">
+          <FaFacebook className='h-6 w-6'/>
+          <FaGithub className='h-6 w-6'/>
+          <FaWeixin className='h-6 w-6'/>
+          <FaLinkedin className='h-6 w-6'/>
         </div>
       </div>
     </div>

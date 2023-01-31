@@ -3,7 +3,7 @@
  * @Email: cnfrank527@gmail.com
  * @Date: 2023-01-30 17:53:25
  * @LastEditors: Frank Zhou
- * @LastEditTime: 2023-01-30 21:47:10
+ * @LastEditTime: 2023-01-31 16:12:51
  * @Description: file content
  * @FilePath: /react-cms-tailwind/src/components/Blogs.jsx
  */
@@ -38,7 +38,7 @@ function Blogs() {
       <div className="max-w-[1240px] mx-auto">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 px-4 text-black">
           {blogs.map((blog) => (
-            <div className="bg-white rounded-xl overflow-hidden drop-shadow-md">
+            <div className="bg-white rounded-xl overflow-hidden drop-shadow-md" key={blog.id}>
               <img
                 src={
                   'https://img.freepik.com/premium-vector/react-js-logo-design-collection_610324-4.jpg?w=2000'
